@@ -22,6 +22,21 @@ module.exports = {
         assert.equal(header, 'max-age=15552000');
       });
     },
+    'should not set header if not secure': function() {
+      var fn = hsts();
+      req.connection.encrypted = null;
+      fn(req, res, function() {
+        assert(!res._headers['Strict-Transport-Security']);
+      });
+    },
+    'should set header if proxySecure': function() {
+      var fn = hsts();
+      req.connection.encrypted = null;
+      req.connection.proxySecure = true;
+      fn(req, res, function() {
+        assert(res._headers['Strict-Transport-Security']);
+      });
+    },
     'should use provided options': function() {
       var fn = hsts({ maxAge: 100, includeSubdomains: true });
       fn(req, res, function() {

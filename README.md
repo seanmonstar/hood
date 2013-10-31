@@ -41,6 +41,8 @@ app.use(hood.csp("default-src 'self';"));
 
 ### hsts
 
+Only applies header if request is secure. Checks `req.connection.encrypted` and `req.connection.proxySecure`.
+
 ```js
 app.use(hood.hsts());
 app.use(hood.hsts({

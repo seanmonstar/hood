@@ -6,6 +6,7 @@ function MockRequest(options) {
   if (!(this instanceof MockRequest)) {
     return new MockRequest(options);
   }
+  this.connection = { encrypted: {} };
 }
 
 function MockResponse(options) {
