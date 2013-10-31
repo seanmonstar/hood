@@ -1,7 +1,7 @@
 {
   "name": "hood",
-  "version": "0.0.0",
-  "description": "cover your head",
+  "version": "0.1.0",
+  "description": "cover your head. security headers middleware.",
   "main": "./lib/index.js",
   "scripts": {
     "test": "mocha --check-leaks --ui exports"
