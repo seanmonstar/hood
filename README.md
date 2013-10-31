@@ -1,8 +1,13 @@
 # hood
 
+[![Build Status](https://travis-ci.org/seanmonstar/hood.png?branch=master)](https://travis-ci.org/seanmonstar/hood)
+[![NPM version](https://badge.fury.io/js/hood.png)](http://badge.fury.io/js/hood)
+
 Cover your head.
 
 Security headers middleware.
+
+![hood](https://github.com/seanmonstar/hood/raw/master/hood.png)
 
 ## Usage
 
