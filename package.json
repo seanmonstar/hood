@@ -19,6 +19,15 @@
     "express",
     "middleware"
   ],
+  "bugs": "https://github.com/seanmonstar/hood/issues",
+  "homepage": "https://github.com/seanmonstar/hood",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seanmonstar/hood.git"
+  },
   "author": "Sean McArthur <sean.monstar@gmail.com> (http://seanmonstar.com)",
-  "license": "MPLv2.0"
+  "licenses" : [{
+    "type": "MPL 2.0",
+    "url": "https://mozilla.org/MPL/2.0/"
+  }]
 }
