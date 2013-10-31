@@ -15,6 +15,7 @@
     "csp",
     "hsts",
     "xframe",
+    "nosniff",
     "connect",
     "express",
     "middleware"
