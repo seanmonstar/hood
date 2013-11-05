@@ -33,10 +33,10 @@ module.exports = {
       },
       'policy' : {
         'should use the provide policy': function() {
-          var fn = csp({ policy: { 'img-src': 'self' }});
+          var fn = csp({ policy: { 'img-src': 'self', 'script-src': 'self' }});
           fn(req, res, function() {
             var header = res._headers['Content-Security-Policy'];
-            assert.equal(header, "img-src 'self';");
+            assert.equal(header, "img-src 'self'; script-src 'self';");
           });
         },
         'can provide string value': function() {
