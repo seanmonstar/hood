@@ -54,7 +54,7 @@ app.use(hood.hsts(1000, true));
 
 ### xframe
 
-````js
+```js
 app.use(hood.xframe()) // DENY
 app.use(hood.xframe({
   sameOrigin: true
