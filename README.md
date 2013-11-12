@@ -5,7 +5,9 @@
 
 Cover your head.
 
-Security headers middleware.
+Security headers middleware for [connect](https://npmjs.org/package/connect) or [express](https://npmjs.org/package/express).
+
+Further readings on middlewares can be found [here](http://www.senchalabs.org/connect/)
 
 ![hood](https://github.com/seanmonstar/hood/raw/master/hood.png)
 
