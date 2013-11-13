@@ -29,6 +29,14 @@ module.exports = {
         assert(!res._headers['Strict-Transport-Security']);
       });
     },
+    'should set header if req.secure': function() {
+      var fn = hsts();
+      req.connection.encrypted = null;
+      req.secure = true;
+      fn(req, res, function() {
+        assert(res._headers['Strict-Transport-Security']);
+      });
+    },
     'should set header if proxySecure': function() {
       var fn = hsts();
       req.connection.encrypted = null;
