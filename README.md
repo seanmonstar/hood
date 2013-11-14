@@ -68,11 +68,17 @@ app.use(hood.xframe('SAMEORIGIN'));
 app.use(hood.xframe('ALLOW-FROM http://example.domain'));
 ```
 
+### nosniff
+
+```js
+app.use(hood.nosniff());
+```
+
 ### header
 
 A convenience method when you need to add arbitrary headers to all requests.
 
-````js
+```js
 app.use(hood.header('x-foo', 'bar'));
 app.use(hood.header({
   'x-foo': 'bar',
