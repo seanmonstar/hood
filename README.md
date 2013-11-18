@@ -74,6 +74,12 @@ app.use(hood.xframe('ALLOW-FROM http://example.domain'));
 app.use(hood.nosniff());
 ```
 
+### iexss
+
+```js
+app.use(hood.nosniff());
+```
+
 ### header
 
 A convenience method when you need to add arbitrary headers to all requests.
