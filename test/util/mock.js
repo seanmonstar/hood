@@ -17,23 +17,6 @@ function MockResponse(options) {
   this._headers = {};
 }
 
-MockResponse.prototype.header = function header(field, val) {
-  if (2 === arguments.length) {
-    if (Array.isArray(val)) {
-      val = val.map(String);
-    } else {
-      val = String(val);
-    }
-    this.setHeader(field, val);
-  } else {
-    for (var key in field) {
-      this.set(key, field[key]);
-    }
-  }
-  return this;
-};
-MockResponse.prototype.set = MockResponse.prototype.header;
-
 MockResponse.prototype.setHeader = function setHeader(key, val) {
   this._headers[key] = val;
 };
