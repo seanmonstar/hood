@@ -1,5 +1,10 @@
 # ChangeLog
 
+## v0.2.0 - 2013-12-04
+
+- Added `reportOnly` to `csp()`
+- Changed expressism `res.header()` to `res.setHeader()`
+
 ## v0.1.2 - 2013-11-13
 
 - Added check for `req.secure` to `hsts()`
