@@ -54,11 +54,26 @@ module.exports = {
           });
         }
       },
+      'reportOnly': {
+        'should change to Report-Only header': function() {
+          var fn = csp({ reportOnly: true });
+          fn(req, res, function() {
+            assert.equal(Object.keys(res._headers).length, 1);
+            assert(res._headers['Content-Security-Policy-Report-Only']);
+          });
+        }
+      },
       'shortcuts': function() {
         var fn = csp("img-src 'self';");
         fn(req, res, function() {
           var header = res._headers['Content-Security-Policy'];
           assert.equal(header, "img-src 'self';");
+        });
+
+        fn = csp("script-src 'self';", true);
+        fn(req, res, function() {
+          var header = res._headers['Content-Security-Policy-Report-Only'];
+          assert.equal(header, "script-src 'self';");
         });
       }
     }

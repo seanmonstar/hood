@@ -39,6 +39,13 @@ app.use(hood.csp({
   }
 }));
 app.use(hood.csp("default-src 'self';"));
+
+// to use Report-Only
+app.use(hood.csp({
+  policy: somePolicy,
+  reportOnly: true
+}))
+app.use(hood.csp(policyStr, true));
 ```
 
 ### hsts
