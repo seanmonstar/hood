@@ -1,5 +1,9 @@
 # ChangeLog
 
+## v0.2.1 - 2013-12-04
+
+- Added `X-*-Report-Only` headers to `reportOnly`
+
 ## v0.2.0 - 2013-12-04
 
 - Added `reportOnly` to `csp()`
