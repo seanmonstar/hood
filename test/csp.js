@@ -58,7 +58,7 @@ module.exports = {
         'should change to Report-Only header': function() {
           var fn = csp({ reportOnly: true });
           fn(req, res, function() {
-            assert.equal(Object.keys(res._headers).length, 1);
+            assert.equal(Object.keys(res._headers).length, 3);
             assert(res._headers['Content-Security-Policy-Report-Only']);
           });
         }
